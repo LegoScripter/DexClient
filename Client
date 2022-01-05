@@ -1,0 +1,748 @@
+--Keybind: Right Alt To Open/Close
+_G.Key = "12432154" --WhiteList Key
+
+local Check = Instance.new("IntValue")
+Check.Value = _G.Key
+if Check.Value == 12432154 then
+local Gui1 = game.CoreGui:FindFirstChild("ScreenGui")
+if Gui1 then
+Gui1:Destroy()
+end
+local Gui = game.CoreGui:FindFirstChild("DexClient")
+if Gui then
+Gui.Bin.Background.Title.TitleBar.Text = "Destroying Gui..."
+wait(1)
+Gui:Destroy()
+end
+
+local DexClient = Instance.new("ScreenGui")
+local Bin = Instance.new("Frame")
+local Background = Instance.new("Frame")
+local Title = Instance.new("ImageLabel")
+local TitleBar = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local OtherClose = Instance.new("TextButton")
+local BGImage = Instance.new("ImageLabel")
+local Execute = Instance.new("ImageButton")
+local Label = Instance.new("TextLabel")
+local Clear = Instance.new("ImageButton")
+local Label_2 = Instance.new("TextLabel")
+local BGExec = Instance.new("ScrollingFrame")
+local Write = Instance.new("TextBox")
+local BGExec_2 = Instance.new("ImageLabel")
+local Dragger = Instance.new("ImageButton")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Open = Instance.new("ImageButton")
+local Label_3 = Instance.new("TextLabel")
+
+--Properties:
+
+DexClient.Name = "DexClient"
+DexClient.Parent = game.CoreGui
+DexClient.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DexClient.ResetOnSpawn = false
+
+Bin.Name = "Bin"
+Bin.Parent = DexClient
+Bin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bin.BackgroundTransparency = 1.000
+Bin.Size = UDim2.new(1, 0, 1, 0)
+
+Background.Name = "Background"
+Background.Parent = Bin
+Background.Active = true
+Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Background.BackgroundTransparency = 1.000
+Background.ClipsDescendants = true
+Background.Draggable = true
+Background.Position = UDim2.new(0, 289, 0, 164)
+Background.Size = UDim2.new(0, 400, 0, 280)
+
+Title.Name = "Title"
+Title.Parent = Background
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(1, 0, 0, 25)
+Title.ZIndex = 2
+Title.Image = "rbxassetid://3570695787"
+Title.ImageColor3 = Color3.fromRGB(41, 74, 122)
+Title.ScaleType = Enum.ScaleType.Slice
+Title.SliceCenter = Rect.new(100, 100, 100, 100)
+Title.SliceScale = 0.020
+--UICorner.Parent = Title
+
+TitleBar.Name = "TitleBar"
+TitleBar.Parent = Title
+TitleBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleBar.BackgroundTransparency = 1.000
+TitleBar.Position = UDim2.new(0.0780000016, 0, 0, 0)
+TitleBar.Size = UDim2.new(0.907500029, 0, 1, 0)
+TitleBar.Font = Enum.Font.SourceSansSemibold
+TitleBar.Text = "Dex Client"
+TitleBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleBar.TextSize = 16.000
+TitleBar.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton.Parent = Title
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(1, -25, 0, 0)
+TextButton.Size = UDim2.new(0, 25, 1, 0)
+TextButton.Font = Enum.Font.SourceSansLight
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 20.000
+TextButton.TextWrapped = true
+
+OtherClose.Name = "OtherClose"
+OtherClose.Parent = Title
+OtherClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OtherClose.BackgroundTransparency = 1.000
+OtherClose.Position = UDim2.new(1, -397, 0, 0)
+OtherClose.Rotation = 90.000
+OtherClose.Size = UDim2.new(0, 25, 1, 0)
+OtherClose.Font = Enum.Font.SourceSansLight
+OtherClose.Text = "D"
+OtherClose.TextSize = 25.000
+OtherClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+OtherClose.TextWrapped = true
+
+BGImage.Name = "BGImage"
+BGImage.Parent = Background
+BGImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BGImage.BackgroundTransparency = 1.000
+BGImage.Position = UDim2.new(0, 0, 0, 15)
+BGImage.Size = UDim2.new(1, 0, 1, -15)
+BGImage.Image = "rbxassetid://1051180924"
+BGImage.ImageColor3 = Color3.fromRGB(25, 25, 25)
+BGImage.ScaleType = Enum.ScaleType.Slice
+BGImage.SliceCenter = Rect.new(20, 20, 20, 20)
+
+Execute.Name = "Execute"
+Execute.Parent = Background
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BackgroundTransparency = 1.000
+Execute.Position = UDim2.new(0, 5, 1, -25)
+Execute.Size = UDim2.new(0, 60, 0, 20)
+Execute.Image = "rbxassetid://3570695787"
+Execute.ImageColor3 = Color3.fromRGB(37, 71, 110)
+Execute.ScaleType = Enum.ScaleType.Slice
+Execute.SliceCenter = Rect.new(100, 100, 100, 100)
+Execute.SliceScale = 0.020
+
+Label.Name = "Label"
+Label.Parent = Execute
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 1.000
+Label.Size = UDim2.new(1, 0, 1, 0)
+Label.Font = Enum.Font.SourceSansSemibold
+Label.Text = "Execute"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 14.000
+
+Clear.Name = "Clear"
+Clear.Parent = Background
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BackgroundTransparency = 1.000
+Clear.Position = UDim2.new(0, 70, 1, -25)
+Clear.Size = UDim2.new(0, 50, 0, 20)
+Clear.Image = "rbxassetid://3570695787"
+Clear.ImageColor3 = Color3.fromRGB(37, 71, 110)
+Clear.ScaleType = Enum.ScaleType.Slice
+Clear.SliceCenter = Rect.new(100, 100, 100, 100)
+Clear.SliceScale = 0.020
+
+Label_2.Name = "Label"
+Label_2.Parent = Clear
+Label_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.BackgroundTransparency = 1.000
+Label_2.Size = UDim2.new(1, 0, 1, 0)
+Label_2.Font = Enum.Font.SourceSansSemibold
+Label_2.Text = "Clear"
+Label_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.TextSize = 14.000
+
+BGExec.Name = "BGExec"
+BGExec.Parent = Background
+BGExec.Active = true
+BGExec.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BGExec.BackgroundTransparency = 1.000
+BGExec.BorderSizePixel = 0
+BGExec.Position = UDim2.new(0, 5, 0, 30)
+BGExec.Size = UDim2.new(1, -10, 1, -60)
+BGExec.ZIndex = 2
+BGExec.CanvasSize = UDim2.new(0, 0, 0, 0)
+BGExec.ScrollBarThickness = 0
+
+Write.Name = "Write"
+Write.Parent = BGExec
+Write.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Write.BackgroundTransparency = 1.000
+Write.BorderSizePixel = 0
+Write.Size = UDim2.new(1, 0, 1, 0)
+Write.ZIndex = 2
+Write.ClearTextOnFocus = false
+Write.Font = Enum.Font.Code
+Write.MultiLine = true
+Write.Text = ""
+Write.TextColor3 = Color3.fromRGB(204, 204, 204)
+Write.TextSize = 14.000
+Write.TextStrokeTransparency = 0.950
+Write.TextXAlignment = Enum.TextXAlignment.Left
+Write.TextYAlignment = Enum.TextYAlignment.Top
+
+BGExec_2.Name = "BGExec"
+BGExec_2.Parent = Background
+BGExec_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BGExec_2.BackgroundTransparency = 1.000
+BGExec_2.Position = UDim2.new(0, 5, 0, 30)
+BGExec_2.Size = UDim2.new(1, -10, 1, -61)
+BGExec_2.Image = "rbxassetid://3570695787"
+BGExec_2.ImageColor3 = Color3.fromRGB(15, 15, 15)
+BGExec_2.ScaleType = Enum.ScaleType.Slice
+BGExec_2.SliceCenter = Rect.new(100, 100, 100, 100)
+BGExec_2.SliceScale = 0.020
+
+Dragger.Name = "Dragger"
+Dragger.Parent = Background
+Dragger.Active = false
+Dragger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dragger.BackgroundTransparency = 1.000
+Dragger.Position = UDim2.new(1, -20, 1, -20)
+Dragger.Size = UDim2.new(0, 20, 0, 20)
+Dragger.Modal = true
+Dragger.Image = "rbxassetid://3570695787"
+Dragger.ImageColor3 = Color3.fromRGB(32, 53, 78)
+Dragger.ImageTransparency = 0.250
+Dragger.ScaleType = Enum.ScaleType.Slice
+Dragger.SliceCenter = Rect.new(100, 100, 100, 100)
+Dragger.SliceScale = 0.020
+Dragger.Visible = false
+
+Frame.Parent = Background
+Frame.BackgroundColor3 = Color3.fromRGB(17, 19, 16)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(1, -32, 1, -23)
+Frame.Rotation = -45.000
+Frame.Selectable = true
+Frame.Size = UDim2.new(0, 30, 0, 15)
+Frame.Visible = false
+
+Open.Name = "Open"
+Open.Parent = Background
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
+Open.Position = UDim2.new(0, 335, 1, -25)
+Open.Size = UDim2.new(0, 60, 0, 20)
+Open.Image = "rbxassetid://3570695787"
+Open.ImageColor3 = Color3.fromRGB(37, 71, 110)
+Open.ScaleType = Enum.ScaleType.Slice
+Open.SliceCenter = Rect.new(100, 100, 100, 100)
+Open.SliceScale = 0.020
+Open.Visible = true
+
+Label_3.Name = "Label"
+Label_3.Parent = Open
+Label_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_3.BackgroundTransparency = 1.000
+Label_3.Size = UDim2.new(1, 0, 1, 0)
+Label_3.Font = Enum.Font.SourceSansSemibold
+Label_3.Text = "Scripts"
+Label_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_3.TextSize = 14.000
+DexClient.Enabled = true
+Background.Active = true
+Background.Draggable = true
+Clear.MouseButton1Down:connect(function()
+Write.Text = ""
+end)
+Open.MouseButton1Down:connect(function()
+Label_3.Text = "Opening..."
+wait(1)
+local Gui = game.CoreGui:FindFirstChild("AYOOOOOOOOOOO")
+if Gui then
+Gui:Destroy()
+end
+Label_3.Text = "Scripts"
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UICorner1 = Instance.new("UICorner")
+local UICorner2 = Instance.new("UICorner")
+local UICorner3 = Instance.new("UICorner")
+local UICorner4 = Instance.new("UICorner")
+local UICorner5 = Instance.new("UICorner")
+local UICorner6 = Instance.new("UICorner")
+local UICorner7 = Instance.new("UICorner")
+local Free = Instance.new("TextButton")
+local OtherClose = Instance.new("TextButton")
+local IF = Instance.new("TextButton")
+local OwlHub = Instance.new("TextButton")
+local main1 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local ragdoll = Instance.new("TextButton")
+local another = Instance.new("TextButton")
+local prisionlife = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Name = "AYOOOOOOOOOOO"
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+main.Position = UDim2.new(0, 696, 0, 171)
+main.Size = UDim2.new(0, 250, 0, 266)
+main.Visible = true
+UICorner.Parent = main
+
+main1.Name = "Title"
+main1.Parent = ScreenGui.main
+main1.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+main1.Position = UDim2.new(0, 0, 0, 0)
+main1.Size = UDim2.new(0, 250, 0, 25)
+main1.Visible = true
+main1.BorderSizePixel = 0
+
+
+OtherClose.Name = "OtherClose"
+OtherClose.Parent = main1
+OtherClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OtherClose.BackgroundTransparency = 1.000
+OtherClose.Position = UDim2.new(1, -247, 0, 0)
+OtherClose.Rotation = 90.000
+OtherClose.Size = UDim2.new(0, 25, 1, 0)
+OtherClose.Font = Enum.Font.SourceSansLight
+OtherClose.Text = "D"
+OtherClose.TextSize = 25.000
+OtherClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+OtherClose.TextWrapped = true
+
+
+Free.Name = "Free"
+Free.Parent = main
+Free.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Free.Position = UDim2.new(0.0258627087, 0, 0.411674887, 0)
+Free.Size = UDim2.new(0, 80, 0, 49)
+Free.Font = Enum.Font.SourceSansSemibold
+Free.Text = "Free Cam"
+Free.TextScaled = true
+Free.TextColor3 = Color3.fromRGB(255, 255, 255)
+Free.TextSize = 40.000
+UICorner1.Parent = Free
+
+IF.Name = "IF"
+IF.Parent = main
+IF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+IF.Position = UDim2.new(0, 167, 0, 55)
+IF.Size = UDim2.new(0, 80, 0, 50)
+IF.Font = Enum.Font.SourceSansSemibold
+IF.Text = "Infinite Yield"
+IF.TextScaled = true
+IF.TextColor3 = Color3.fromRGB(255, 255, 255)
+IF.TextSize = 40.000
+UICorner2.Parent = IF
+
+OwlHub.Name = "OwlHub"
+OwlHub.Parent = main
+OwlHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OwlHub.Position = UDim2.new(0.0258627236, 0, 0.201138526, 0)
+OwlHub.Size = UDim2.new(0, 80, 0, 50)
+OwlHub.Font = Enum.Font.SourceSansSemibold
+OwlHub.Text = "Owl Hub"
+OwlHub.TextScaled = true
+OwlHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+OwlHub.TextSize = 40.000
+UICorner3.Parent = OwlHub
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, -50, 0, -11)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "Scripts"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.321793377, 0, 0.870104909, 0)
+TextLabel_2.Size = UDim2.new(0, 15, 0, 210)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ""
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 40.000
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0, 220, 0, 0)
+close.Size = UDim2.new(0, 31, 0, 30)
+close.Font = Enum.Font.SourceSansLight
+close.Text = "X"
+close.BackgroundTransparency = 1
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 20.000
+UICorner4.Parent = close
+main1.BorderSizePixel = 0
+
+ragdoll.Name = "ragdoll"
+ragdoll.Parent = main
+ragdoll.TextScaled = true
+ragdoll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ragdoll.Position = UDim2.new(0, 167, 0, 109)
+ragdoll.Size = UDim2.new(0, 80, 0, 50)
+ragdoll.Font = Enum.Font.SourceSansSemibold
+ragdoll.Text = "BEAR (ALPHA)"
+ragdoll.TextColor3 = Color3.fromRGB(255, 255, 255)
+ragdoll.TextSize = 40.000
+UICorner5.Parent = ragdoll
+
+another.Name = "another"
+another.Parent = main
+another.TextScaled = true
+another.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+another.Position = UDim2.new(0, 167, 0, 160)
+another.Size = UDim2.new(0, 80, 0, 50)
+another.Font = Enum.Font.SourceSansSemibold
+another.Text = "Anti Afk"
+another.TextColor3 = Color3.fromRGB(255, 255, 255)
+another.TextSize = 40.000
+UICorner6.Parent = another
+
+prisionlife.Name = "prisionlife"
+prisionlife.Parent = main
+prisionlife.TextScaled = true
+prisionlife.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+prisionlife.Position = UDim2.new(0.0250777006, 0, 0.602373064, 0)
+prisionlife.Size = UDim2.new(0, 80, 0, 50)
+prisionlife.Font = Enum.Font.SourceSansSemibold
+prisionlife.Text = "Prision Life"
+prisionlife.TextColor3 = Color3.fromRGB(255, 255, 255)
+prisionlife.TextSize = 40.000
+UICorner7.Parent = prisionlife
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+openmain.Position = UDim2.new(0.0184501838, 0, 0.516129017, 0)
+openmain.Size = UDim2.new(0, 100, 0, 27)
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+open.Position = UDim2.new(-0.00999984704, 0, -0.0287803374, 0)
+open.Size = UDim2.new(0, 100, 0, 27)
+open.Font = Enum.Font.SourceSans
+open.Text = "OPEN"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 25.000
+openmain.Active = true
+openmain.Draggable = true
+openmain.Visible = false
+main.Visible = true
+main.Active = true
+main.Draggable = true
+another.MouseButton1Down:connect(function()
+local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+end)
+end)
+open.MouseButton1Down:connect(function()
+openmain.Visible = false
+main.Visible = true
+end)
+close.MouseButton1Down:connect(function()
+main.Visible = false
+main.Parent:Destroy()
+end)
+Free.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/yJ51HKy9", true))()
+end)
+OwlHub.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZinityDrops/OwlHubLink/master/OwlHubBack.lua"))();
+end)
+IF.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+prisionlife.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+end)
+ragdoll.MouseButton1Down:connect(function()
+local Gui = game.CoreGui:FindFirstChild("ScreenGui1")
+if Gui then
+Gui:Destroy()
+_G.Farming = false;
+wait(8)
+_G.Farming = true;
+end
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "IMPORTANT!";
+	Text = "Dont Spam Click Or Will Break The Script!";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 16;
+
+_G.Farming = true;
+
+local ScreenGui = Instance.new("ScreenGui")
+local UICORNER1 = Instance.new("UICorner")
+local UICORNER11 = Instance.new("UICorner")
+local main = Instance.new("Frame")
+local Free = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Name = "ScreenGui1"
+main.Name = "main"
+main.Draggable = true
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+main.Position = UDim2.new(0.276582837, 0, 0.0379506648, 0)
+main.Size = UDim2.new(0, 283, 0, 106)
+main.Visible = true
+UICORNER1.Parent = main
+--! DRAG !--
+
+local UIS = game:GetService('UserInputService')
+local frame = main
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+ local delta = input.Position - dragStart
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+ game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+  dragToggle = true
+  dragStart = input.Position
+  startPos = frame.Position
+  input.Changed:Connect(function()
+   if input.UserInputState == Enum.UserInputState.End then
+    dragToggle = false
+   end
+  end)
+ end
+end)
+
+UIS.InputChanged:Connect(function(input)
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+  if dragToggle then
+   updateInput(input)
+  end
+ end
+end)
+--end
+
+Free.Name = "Free"
+Free.Parent = main
+Free.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Free.Position = UDim2.new(0, 25, 0, 15)
+Free.Size = UDim2.new(0, 233, 0, 76)
+Free.Font = Enum.Font.SourceSans
+Free.Text = "AUTO FARM: ON"
+Free.TextColor3 = Color3.fromRGB(0, 0, 0)
+Free.TextSize = 40.000
+UICORNER11.Parent = Free
+Free.MouseButton1Down:connect(function()
+if Free.Text == "AUTO FARM: OFF" then
+wait(0.5)
+Free.Text = "AUTO FARM: ON"
+Free.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+_G.Farming = true;
+else
+Free.Text = "ANTI SPAM..."
+Free.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+_G.Farming = false;
+wait(9)
+Free.Text = "AUTO FARM: OFF"
+end
+end)
+while wait(0.1) do
+while _G.Farming == true do
+wait(1)
+local p1 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+if p1 then
+local pos = p1.CFrame
+
+p1.CFrame = game.Workspace.Obby.Quidz.CFrame
+wait(0.1)
+local yet = p1.Parent:FindFirstChild("Humanoid")
+if yet then
+yet.Jump = true
+wait(0.5)
+yet.Jump = true
+end
+wait(7.8)
+end
+end
+end
+end)
+OtherClose.MouseButton1Down:connect(function()
+if IF.Visible == true then
+OtherClose.Rotation = 60.000
+IF.Visible = false
+wait(0.05)
+Free.Visible = false
+OtherClose.Rotation = 40.000
+wait(0.05)
+OwlHub.Visible = false
+OtherClose.Rotation = 20.000
+wait(0.05)
+ragdoll.Visible = false
+OtherClose.Rotation = 10.000
+wait(0.05)
+another.Visible = false
+OtherClose.Rotation = 05.000
+wait(0.05)
+prisionlife.Visible = false
+main.BackgroundTransparency = 1
+OtherClose.Rotation = 0.001
+
+else
+OtherClose.Rotation = 10.000
+main.BackgroundTransparency = 0
+IF.Visible = true
+wait(0.05)
+Free.Visible = true
+OtherClose.Rotation = 15.000
+wait(0.05)
+OwlHub.Visible = true
+OtherClose.Rotation = 20.000
+wait(0.05)
+ragdoll.Visible = true
+OtherClose.Rotation = 40.000
+wait(0.05)
+another.Visible = true
+OtherClose.Rotation = 60.000
+wait(0.05)
+prisionlife.Visible = true
+OtherClose.Rotation = 90.000
+end
+end)
+end)
+Execute.MouseButton1Down:connect(function()
+	loadstring(Write.Text) ()
+end)
+TextButton.MouseButton1Down:connect(function()
+TitleBar.Text = "Destroying Gui..."
+wait(1)
+local Gui1 = game.CoreGui:FindFirstChild("ScreenGui")
+if Gui1 then
+Gui1:Destroy()
+end
+DexClient:Destroy()
+end)
+--
+OtherClose.MouseButton1Down:connect(function()
+if Label_3.Visible == true then
+OtherClose.Rotation = 60.000
+wait(0.05)
+BGExec_2.Visible = false
+Label_3.Visible = false
+OtherClose.Rotation = 40.000
+wait(0.05)
+Label_2.Visible = false
+Open.Visible = false
+BGExec.Visible = false
+Write.Visible = false
+OtherClose.Rotation = 20.000
+wait(0.05)
+OtherClose.Rotation = 10.000
+wait(0.05)
+Label.Visible = false
+Clear.Visible = false
+OtherClose.Rotation = 05.000
+wait(0.05)
+BGImage.Visible = false
+Execute.Visible = false
+OtherClose.Rotation = 0.001
+
+else
+OtherClose.Rotation = 10.000
+wait(0.05)
+BGImage.Visible = true
+Open.Visible = true
+Execute.Visible = true
+Label.Visible = true
+OtherClose.Rotation = 15.000
+wait(0.05)
+OtherClose.Rotation = 20.000
+wait(0.05)
+OtherClose.Rotation = 40.000
+wait(0.05)
+Write.Visible = true
+BGExec_2.Visible = true
+Label_3.Visible = true
+OtherClose.Rotation = 60.000
+wait(0.05)
+BGImage.Visible = true
+Execute.Visible = true
+Label.Visible = true
+Clear.Visible = true
+Label_2.Visible = true
+BGExec.Visible = true
+OtherClose.Rotation = 90.000
+end
+end)
+--! Keybind !--
+local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:wait()
+local hum = char:WaitForChild('Humanoid')
+
+local UIS = game:GetService('UserInputService')
+local runServ = game:GetService('RunService')
+
+UIS.InputBegan:Connect(function(i,g)
+if g then return end
+
+if i.KeyCode == Enum.KeyCode.RightAlt then
+       if DexClient.Enabled == false then
+        DexClient.Enabled = true
+       else
+        DexClient.Enabled = false
+       end
+end
+end)
+
+function main()
+
+end
+
+runServ.RenderStepped:Connect(function()
+main()
+end)
+while wait(0.1) do
+if DexClient.Enabled == false then
+local Gui1 = game.CoreGui:FindFirstChild("AYOOOOOOOOOOO")
+if Gui1 then
+Gui1.Enabled = false
+end
+else
+if Gui1 then
+Gui1.Enabled = true
+end
+end
+end
+else
+print'NOT WHITELISTED!'
+end
