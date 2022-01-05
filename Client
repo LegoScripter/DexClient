@@ -251,7 +251,7 @@ Label_3.Font = Enum.Font.SourceSansSemibold
 Label_3.Text = "Scripts"
 Label_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Label_3.TextSize = 14.000
-DexClient.Enabled = false
+DexClient.Enabled = true
 Background.Active = true
 Background.Draggable = true
 Clear.MouseButton1Down:connect(function()
